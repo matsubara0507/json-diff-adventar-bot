@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  bot:
+    image: matsubara0507/json-diff-adventar-bot
+    command: json-diff-adventar-bot "/config/old.json" "/config/new.json" "${SLACK_CHANNEL}"
+    volumes:
+      - ./config:/config
+    environment:
+      LANG: C.utf-8
+      SLACK_TOKEN:

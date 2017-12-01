@@ -1,0 +1,15 @@
+resolver: lts-9.14
+packages:
+- .
+extra-deps:
+- slack-api-0.12
+flags: {}
+extra-package-dbs: []
+
+docker:
+  repo: "fpco/stack-build"
+
+image:
+  container:
+    name: "matsubara0507/json-diff-adventar-bot"
+    base: "matsubara0507/ubuntu-tcp"
